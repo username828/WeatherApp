@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes cloud-move {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-clouds {
+  @apply absolute inset-0 overflow-hidden;
+  animation: cloud-move 60s linear infinite;
+}
+
+.cloud {
+  @apply absolute bg-white rounded-full opacity-50 shadow-lg;
+}
